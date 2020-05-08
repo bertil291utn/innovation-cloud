@@ -1,4 +1,3 @@
-    
 <div class="header">
   <div class="container">
     <h1>Innovation Cloud</h1>
@@ -30,7 +29,12 @@
   <div class="container">
     <h2>Stay Connected</h2>
     <p>Receive weekly insights from industry insiders.</p>
-    <!-- Your code here -->
+    <%= form_for(@signup) do |f| %>
+      <div class="field">
+        <%= f.text_field :email,placeholder: 'Enter your email' %>
+        <%= f.submit "Join", :class =>'btn' %>
+      </div>
+    <% end %>
   </div>
 </div>
 <div class="footer">
